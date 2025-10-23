@@ -6,7 +6,7 @@ This organization is the home of the NovaHub project, sponsored by Circular Engi
 * 📚 Read our documentation at [docs.novahub.network](https://docs.novahub.network)
 
 ### How to Get Involved
-We welcome contributions of all kinds—from code and documentation to design and community management. The best place to start is our [Contribution Guide](CONTRIBUTING.md), which outlines how our community operates and how you can make your first contribution.
+We welcome contributions of all kinds—from code and documentation to design and community management. The best place to start is our [Contribution Guide](../CONTRIBUTING.md), which outlines how our community operates and how you can make your first contribution.
 
 ### Our Core Repositories
 While we have many repositories, here are a few key places to start:
@@ -14,4 +14,4 @@ While we have many repositories, here are a few key places to start:
 * docs: The source for our documentation site.
 * website: The source for our main landing page.
 ---------------------------------------------------------------
-We are committed to fostering an open and welcoming environment. Please read our [Contribution Guide](CONTRIBUTING.md) and [Code of Conduct Guide](CODE_OF_CONDUCT.md) before participating.
+We are committed to fostering an open and welcoming environment. Please read our [Contribution Guide](../CONTRIBUTING.md) and [Code of Conduct Guide](../CODE_OF_CONDUCT.md) before participating.

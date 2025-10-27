@@ -1,0 +1,68 @@
+labels:
+  - name: "good first issue ✅"
+    color: "0E8A16"
+    description: "Excellent for new contributors."
+
+  - name: "help wanted"
+    color: "A2EEF3"
+    description: "Good for any community member to pick up."
+
+  - name: "status: needs-triage ✏️"
+    color: "FBCA04"
+    description: "For new issues that need review by a maintainer."
+
+  - name: "status: blocked ✋"
+    color: "E99695"
+    description: "Indicates an issue is stalled and needs external action."
+
+  - name: "status: hotfix 🔥"
+    color: "B60205"
+    description: "An urgent fix for a production release."
+
+  - name: "type: bug 🐞"
+    color: "D73A4A"
+    description: "Something isn't working or behaves unexpectedly."
+
+  - name: "type: documentation 📚"
+    color: "3850B8"
+    description: "Improvements or additions to documentation."
+
+  - name: "type: feature ✨"
+    color: "3850B8"
+    description: "A new feature or request for new functionality."
+
+  - name: "type: refactor 🔧"
+    color: "3850B8"
+    description: "A code change that neither fixes a bug nor adds a feature."
+
+  - name: "type: research 🧪"
+    color: "3850B8"
+    description: "A task for investigating or exploring a potential solution."
+
+  - name: "type: chore 🧹"
+    color: "3850B8"
+    description: "Maintenance tasks, such as dependency updates or CI improvements."
+
+  - name: "needs: dev 👩‍💻"
+    color: "0072B2"
+    description: "Requires coding/engineering skills."
+
+  - name: "needs: design 🎨"
+    color: "009E73"
+    description: "Requires UX/UI design skills."
+
+  - name: "needs: docs ✍️"
+    color: "D4C5F9"
+    description: "Requires technical writing or documentation updates."
+
+  - name: "needs: expert-input 🧠"
+    color: "DDAA33"
+    description: "Needs input from a non-technical subject matter expert."
+
+  - name: "needs: legal ⚖️"
+    color: "6E5494"
+    description: "Needs legal input."
+
+  - name: "needs: pm 🧠"
+    color: "CC79A7"
+    description: "Requires input from the product team for scope or clarification."

@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to suggest a new feature! Please note that we prefer new ideas to be discussed in(link-to-your-discussions) first.
+        Thanks for taking the time to suggest a new feature! Please note that we prefer new ideas to be discussed in our dedicated [Ideas Page] (https://github.com/orgs/novahub-network/discussions/categories/ideas) first.
   - type: textarea
     id: problem-description
     attributes:

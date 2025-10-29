@@ -10,78 +10,43 @@
         "description": "Open for contribution: maintainers welcome external help."
     },
     {
-        "name": "needs: design 🖌️",
-        "color": "009E73",
-        "description": "Requires UX/UI design input."
-    },
-    {
-        "name": "needs: dev 💻",
-        "color": "0052CC",
-        "description": "Requires coding or engineering expertise."
-    },
-    {
-        "name": "needs: docs 📝",
-        "color": "D4C5F9",
-        "description": "Requires technical writing or documentation updates."
-    },
-    {
-        "name": "needs: expert-input 🎯",
-        "color": "F39C12",
-        "description": "Needs input from a subject matter expert."
-    },
-    {
-        "name": "needs: legal 📜",
-        "color": "6E5494",
-        "description": "Requires legal or compliance review."
-    },
-    {
-        "name": "needs: pm 📊",
-        "color": "CC79A7",
-        "description": "Requires product management input for scope/clarity."
-    },
-    {
-        "name": "status: blocked ⛔",
+        "name": "blocked ⛔",
         "color": "E99695",
         "description": "Work cannot proceed due to external dependency."
     },
     {
-        "name": "status: hotfix 🔥",
+        "name": "hotfix 🔥",
         "color": "B60205",
         "description": "Urgent fix required for production stability."
     },
     {
-        "name": "status: needs-triage 🗂️",
-        "color": "FBCA04",
-        "description": "Awaiting maintainer review and categorization."
+        "name": "needs design 🖌️",
+        "color": "009E73",
+        "description": "Requires UX/UI design input."
     },
     {
-        "name": "type: bug 🐞",
-        "color": "D73A4A",
-        "description": "Something is broken or behaves unexpectedly."
+        "name": "needs dev 💻",
+        "color": "0052CC",
+        "description": "Requires coding or engineering expertise."
     },
     {
-        "name": "type: maintenance 🛠️",
-        "color": "C0C0C0",
-        "description": "Routine tasks like dependency updates or CI tweaks."
+        "name": "needs docs 📝",
+        "color": "D4C5F9",
+        "description": "Requires technical writing or documentation updates."
     },
     {
-        "name": "type: docs 📖",
-        "color": "0366D6",
-        "description": "Documentation improvements or additions."
+        "name": "needs expert-input 🎯",
+        "color": "F39C12",
+        "description": "Needs input from a subject matter expert."
     },
     {
-        "name": "type: feature 🚀",
-        "color": "28A745",
-        "description": "Request or implementation of new functionality."
+        "name": "needs legal 📜",
+        "color": "6E5494",
+        "description": "Requires legal or compliance review."
     },
     {
-        "name": "type: refactor ♻️",
-        "color": "6F42C1",
-        "description": "Code restructuring without changing behavior."
-    },
-    {
-        "name": "type: research 🔬",
-        "color": "17A2B8",
-        "description": "Investigation or exploration of potential solutions."
+        "name": "needs pm 📊",
+        "color": "CC79A7",
+        "description": "Requires product management input for scope/clarity."
     }
 ]

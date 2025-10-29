@@ -1,0 +1,61 @@
+name: Sync Repository Labels
+description: |
+  Automatically sync issue labels across all repositories in the organization based on a central configuration file.
+  Note that the organization's default labels must be manually updated at https://github.com/organizations/novahub-network/settings/repository-defaults
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # Daily at 3:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout config repository
+        uses: actions/checkout@v4
+
+      - name: Generate token from GitHub App
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.LABEL_SYNC_APP_ID }}
+          private-key: ${{ secrets.LABEL_SYNC_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Sync labels across all repos
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          ORG_NAME: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+
+          repos=$(gh repo list "$ORG_NAME" --json name -q '.[].name')
+          desired=$(cat .github/labels.json)
+
+          for repo in $repos; do
+            echo "🔄 Syncing labels for $repo"
+
+            # Get existing labels as JSON array of strings
+            existing=$(gh api "/repos/$ORG_NAME/$repo/labels" --jq '.[].name' | jq -R . | jq -s .)
+
+            # Create or update desired labels
+            echo "$desired" | jq -c '.[]' | while read -r label; do
+              name=$(echo "$label" | jq -r .name)
+              color=$(echo "$label" | jq -r .color)
+              description=$(echo "$label" | jq -r .description)
+
+              gh api -X POST "/repos/$ORG_NAME/$repo/labels" \
+                -f name="$name" -f color="$color" -f description="$description" >/dev/null 2>&1 || \
+              gh api -X PATCH "/repos/$ORG_NAME/$repo/labels/$(jq -rn --arg l "$name" '$l|@uri')" \
+                -f new_name="$name" -f color="$color" -f description="$description" >/dev/null
+            done
+
+            # Delete labels not in config
+            echo "$existing" | jq -r '.[]' | while IFS= read -r label; do
+              if ! echo "$desired" | jq -r '.[].name' | grep -Fxq "$label"; then
+                echo "🗑️ Removing label $label from $repo"
+                gh api -X DELETE "/repos/$ORG_NAME/$repo/labels/$(jq -rn --arg l "$label" '$l|@uri')" || true
+              fi
+            done
+          done

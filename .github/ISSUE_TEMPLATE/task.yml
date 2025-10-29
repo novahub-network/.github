@@ -1,0 +1,55 @@
+name: 🗂️ Task
+description: Create a scoped task or implementation work item
+title: "[Task]: "
+labels: ["needs pm 📊"]
+type: task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a task. Please include a clear summary, acceptance criteria, and any implementation notes to help maintainers triage and contributors pick it up.
+  - type: input
+    id: short-summary
+    attributes:
+      label: Short summary
+      description: A one-line summary of the task.
+      placeholder: Briefly describe the task
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: What must be true for this work to be considered done? Provide measurable or testable items.
+      placeholder: |
+        - Criterion 1
+        - Criterion 2
+    validations:
+      required: true
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation notes
+      description: Any technical details, design links, or constraints to help the implementer.
+      placeholder: Links, code references, config, or approach notes
+  - type: dropdown
+    id: estimate
+    attributes:
+      label: Estimated effort
+      description: Rough sizing to help prioritization.
+      multiple: false
+      options:
+        - Small (<= 4 hours)
+        - Medium (1-2 days)
+        - Large (several days)
+        - Epic (requires breakdown)
+  - type: textarea
+    id: suggested-assignees
+    attributes:
+      label: Suggested assignees
+      description: (Optional) Please @mention people you think can work on this (e.g., @alice, @bob).
+      placeholder: "@username"
+  - type: markdown
+    attributes:
+      value: |
+        Once this task is ready to be picked up it should be moved to **Ready** on the Development Roadmap. If you want to claim it, comment below and a maintainer will assign it and move it to **In Progress**.

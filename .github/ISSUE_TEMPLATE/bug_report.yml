@@ -1,7 +1,8 @@
 name: 🐞 Bug Report
 description: Create a report to help us improve
-title: ": "
-labels: ["type: bug 🐞", "status: needs-triage ✏️"]
+title: "[Bug]: "
+labels: ["needs pm 📊"]
+type: bug
 body:
   - type: markdown
     attributes:

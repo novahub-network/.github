@@ -37,9 +37,9 @@ The horizontal "OS" providing the core infrastructure and capabilities for the e
 * **`mobility-` (Novamobility):** The logistics network for EV fleets and reverse logistics.
 * **`infra-` (Novainfra):** The physical backbone for circular industrial parks.
 * **`skills-` (Novaskills):** The human capital engine for training and "circular job" certifications.
-* **`policy-` (Novapolicy):** The "rulebook" setting standards for governance and compliance.
 * **`balance-` (Novabalance):** The environmental auditor (the "E" in ESG).
 * **`equity-` (Novaequity):** The social auditor (the "S" in ESG).
+* **`policy-` (Novapolicy):** The "rulebook" setting standards for governance and compliance (the "G" in ESG).
 
 #### 3. Sector Pillars (Prefix: `sector-*` topic)
 The vertical "applications" where the enablers are applied to specific industries.

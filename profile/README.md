@@ -6,26 +6,27 @@ Our mission is to engineer the interconnected pillars—from finance and AI to m
 
 * 🌐 **Ecosystem Hub:** [**nova-ecosystem.org**](https://nova-ecosystem.org) (The main "user manual" for the ecosystem)
 * 🚀 **Central App:** [**app.nova-ecosystem.org**](https://app.nova-ecosystem.org) (Your "Mission Control" dashboard)
-* 📚 **Documentation:** [**nova-ecosystem.org/docs**](https://nova-ecosystem.org/docs)
+* 📚 **Documentation:** [**nova-ecosystem.org/docs**](https://nova-ecosystem.org/docs) (Architecture & Guides)
 * 💬 **Email Us:** [**contact@nova-ecosystem.org**](mailto:contact@nova-ecosystem.org)
 
 ---
 
 ### 🏗️ Our Architecture
 
-Our ecosystem is a **"Hub-and-Spoke"** model. The `ecosystem-` repos provide the central "Hub" (identity, dashboard), while the "Spokes" (pillars) are powerful, specialized tools.
+Our ecosystem is a **"Hub-and-Spoke"** model. The repositories in this organization are grouped into four main categories, all identifiable by their prefixes.
 
-All repositories are prefixed (e.g., `hub-`, `agro-`, `product-durasagv-`) to make them easy to identify.
+#### 1. Core Ecosystem Services (Prefix: `ecosystem-`)
+This is the "Hub" or "meta-pillar" that runs the entire system. It provides the central services that all other pillars consume.
 
-#### 1. Core Ecosystem Services (The "Hub")
-This is the meta-pillar that runs the entire system. It's the best place for new contributors to start.
+* **`ecosystem-website`:** The main informational "user manual" and documentation.
+* **`ecosystem-auth`:** The unified "passport" (SSO, KYC, auth) for all users.
+* **`ecosystem-app`:** The central "Mission Control" dashboard for profile management.
+* **`ecosystem-api`:** The central API Gateway (the "front door" for all services).
+* **`ecosystem-qa`:** Cross-pillar testing, QA, and E2E test suites.
+* **`ecosystem-operations`:** Central DevOps, IaC, and deployment pipelines.
 
-* **`ecosystem-website`:** The main informational "user manual" at `nova-ecosystem.org`.
-* **`ecosystem-auth`:** The unified "passport" (SSO, KYC, auth) for all pillars.
-* **`ecosystem-app`:** The central "Mission Control" dashboard at `app.nova-ecosystem.org` for profile management and an overview of all pillars.
-
-#### 2. Enabler Pillars (The "Operating System")
-The horizontal "OS" providing the core infrastructure for the entire economy.
+#### 2. Enabler Pillars (Prefix: `pillar-*` topic)
+The horizontal "OS" providing the core infrastructure and capabilities for the economy.
 
 * **`hub-` (Novahub):** The collaboration engine for projects and partners.
 * **`finance-` (Novafinance):** The capital engine for green loans, bonds, and ESG finance.
@@ -40,8 +41,8 @@ The horizontal "OS" providing the core infrastructure for the entire economy.
 * **`balance-` (Novabalance):** The environmental auditor (the "E" in ESG).
 * **`equity-` (Novaequity):** The social auditor (the "S" in ESG).
 
-#### 3. Sector Pillars (The "Applications")
-The vertical "apps" where the enablers are applied to specific industries.
+#### 3. Sector Pillars (Prefix: `sector-*` topic)
+The vertical "applications" where the enablers are applied to specific industries.
 
 * **`agro-` (Novaagro):** Regenerative agriculture and food systems.
 * **`water-` (Novawater):** Water purification, recycling, and smart irrigation.
@@ -51,12 +52,10 @@ The vertical "apps" where the enablers are applied to specific industries.
 * **`air-` (Novaair):** Air quality monitoring, pollution control, and carbon capture.
 * **`health-` (Novahealth):** Circular healthcare and preventative wellness.
 
-#### 4. Products (Cross-Pillar Solutions)
-These are standalone products that *consume* services from multiple pillars.
+#### 4. Products (Prefix: `product-*` topic)
+These are standalone "flagship" products that *consume* services from multiple pillars and sectors.
 
-* **Example:** `durasagv-core`
-* **Prefix:** `product-durasagv-` (or just `durasagv-` for brevity)
-* **Topics:** `product`, `sector-agro`, `pillar-ai`
+* **Example: `durasagv-`** (An autonomous agricultural vehicle that uses the `ai-` pillar and the `agro-` sector).
 
 ---
 
@@ -65,11 +64,12 @@ These are standalone products that *consume* services from multiple pillars.
 We welcome contributors of all kinds—from code and documentation to design and policy standards. The best place to start is our main [Contribution Guide](../CONTRIBUTING.md).
 
 #### Finding Your Way
-With over 20 pillars, the best way to find a project is to:
+With over 40 repositories, here's how to find what you're looking for:
 
 1.  **Start at the Core:** Our `ecosystem-website` and `ecosystem-app` repos are the best places to understand the core system.
 2.  **Browse the Pillars:** See which pillar or sector above interests you most.
-3.  **Explore by Topic:** We use topics like `pillar-hub`, `sector-agro`, and `help-wanted` to organize work.
+3.  **Explore Products:** Check out our `durasagv-` repos to see how the ecosystem comes together.
+4.  **Filter by Topic:** We use topics like `pillar-hub`, `sector-agro`, `product`, and `help-wanted` to organize work.
 
 ---
 We are committed to fostering an open and welcoming environment. Please read our [Code of Conduct](../CODE_OF_CONDUCT.md) before participating.

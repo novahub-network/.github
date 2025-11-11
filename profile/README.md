@@ -2,11 +2,11 @@
 
 We are an open-source community building the **open-source operating system for a circular economy.**
 
-Our mission is to engineer the interconnected pillars—from finance and AI to materials and agriculture—needed to transition our planet to a sustainable, circular model. The Nova Ecosystem is stewarded by [Circular Engineering Nova GmbH](https://circular.engineering/).
+Our mission is to engineer the interconnected pillars—from finance and AI to materials and agriculture—needed to transition our planet to a sustainable, circular model. The Nova Ecosystem is stewarded by the (future) non-profit **Nova Foundation gGmbH** and commercially supported by **[Circular Engineering Nova GmbH](https://circular.engineering/)**.
 
-* 🌐 **Ecosystem Hub:** [**nova-ecosystem.org**](https://nova-ecosystem.org) (The main "user manual" for the ecosystem)
+* 🌐 **Ecosystem Hub:** [**nova-ecosystem.org**](https://nova-ecosystem.org) (The main "user manual")
 * 🚀 **Central App:** [**app.nova-ecosystem.org**](https://app.nova-ecosystem.org) (Your "Mission Control" dashboard)
-* 📚 **Documentation:** [**nova-ecosystem.org/docs**](https://nova-ecosystem.org/docs) (Architecture & Guides)
+* 📚 **Documentation:** [**nova-ecosystem.org/docs**](https://nova-ecosystem.org/docs) (Architecture, Guides, & API Docs)
 * 💬 **Email Us:** [**contact@nova-ecosystem.org**](mailto:contact@nova-ecosystem.org)
 
 ---
@@ -22,8 +22,7 @@ This is the "Hub" or "meta-pillar" that runs the entire system. It provides the 
 * **`ecosystem-auth`:** The unified "passport" (SSO, KYC, auth) for all users.
 * **`ecosystem-app`:** The central "Mission Control" dashboard for profile management.
 * **`ecosystem-api`:** The central API Gateway (the "front door" for all services).
-* **`ecosystem-qa`:** Cross-pillar testing, QA, and E2E test suites.
-* **`ecosystem-operations`:** Central DevOps, IaC, and deployment pipelines.
+* **`ecosystem-qa`:** Cross-pillar integration tests, QA, and E2E test suites.
 
 #### 2. Enabler Pillars (Prefix: `pillar-*` topic)
 The horizontal "OS" providing the core infrastructure and capabilities for the economy.

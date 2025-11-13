@@ -8,16 +8,15 @@ First, please read our **[Code of Conduct](./CODE_OF_CONDUCT.md)**. We are commi
 
 ## 🗺️ How Our Organization is Structured
 
-We know 40+ repositories can be overwhelming! Here’s a simple map:
+Our organization uses a "monorepo" model to group related code, making it easier to develop and test features atomically.
 
-Our organization is built on a "Hub-and-Spoke" model. All repositories are prefixed to tell you exactly what they are.
+1.  **`ecosystem-core`**: **The Core Monorepo.** This is the "Hub" that runs the entire system. It contains our central `/api` (Gateway), `/auth` (Identity), `/app` (Dashboard), and `/website` (Docs).
+2.  **Pillar Monorepos** (e.g., `hub`, `finance`, `agro`): **The Product Lines.** Each pillar's core product (its API, App, and Website) is in a single repository.
+3.  **Decoupled Workers** (e.g., `hub-worker-sync`): **Backend Services.** These are separate, single-purpose repos for background tasks, developed and deployed independently.
+4.  **Central Governance** (e.g., `ecosystem-qa`, `ecosystem-releases`): Repos that manage testing *between* repositories and define our official releases.
+5.  **Products** (e.g., `durasagv`): Standalone "flagship" product monorepos that consume services from multiple pillars.
 
-1.  **`ecosystem-`**: **Core Services.** This is the "Hub" that runs the entire system (our central API, auth, website, and dashboard).
-2.  **`pillar-*` (topic):** **Enabler Pillars.** These are the horizontal "OS-level" services (e.g., `finance-`, `ai-`, `balance-`, `policy-`).
-3.  **`sector-*` (topic):** **Sector Pillars.** These are the vertical "applications" for specific industries (e.g., `agro-`, `waste-`, `health-`).
-4.  **`product-*` (topic):** **Flagship Products.** These are standalone products that consume services from multiple pillars (e.g., `durasagv-`).
-
-You can read a full description of every pillar on our [**Organization README**](https://github.com/nova-ecosystem).
+You can read a full description of every repository on our [**Organization README**](https://github.com/nova-ecosystem).
 
 ## 🚀 How to Get Started
 
@@ -31,7 +30,7 @@ To understand our vision and where we're headed, start with our high-level plann
 Want to dive in? We've made it easy to find a place to start.
 
 1.  **Start with Documentation:** The easiest way to contribute is to help with our docs. Find a typo, a confusing sentence, or suggest a new guide.
-    * **Go to the docs repo:** [**`ecosystem-website`**](https://github.com/nova-ecosystem/ecosystem-website)
+    * **Go to the docs directory:** [**`ecosystem-core/website`**](https://github.com/nova-ecosystem/ecosystem-core/tree/main/website)
 
 2.  **Find a Beginner-Friendly Task:** We tag simple, well-scoped tasks just for new contributors.
     * **Browse `good first issues`:** [**Find all `good first issue 🌱` tasks**](https://github.com/search?q=org%3Anova-ecosystem+is%3Aopen+is%3Aissue+label%3A%22good+first+issue+%F0%9F%8C%B1%22)
@@ -102,15 +101,16 @@ We follow a standard "fork-and-pull" Git workflow.
 
 1.  **Find an Issue:** Find an issue in the **`Ready`** column of our [Project Board](https://github.com/orgs/nova-ecosystem/projects/1) that you want to work on.
 2.  **Claim it:** Comment on the issue to say you want it. A maintainer will assign it to you and move it to **`In Progress`**.
-3.  **Fork:** Fork the specific repository (e.g., `hub-app`) to your personal GitHub account.
+3.  **Fork:** Fork the specific monorepo (e.g., `hub` or `ecosystem-core`) to your personal GitHub account.
 4.  **Create a Branch:** Create a new branch with a descriptive name. We recommend:
     * `feat/your-feature-name` (for new features)
     * `fix/bug-description` (for bug fixes)
     * `docs/topic-you-are-updating` (for documentation)
 5.  **Code & Commit:** Make your changes. Write clear, atomic commits. We strongly recommend [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) (e.g., `feat: add user login button`, `docs: fix typo in README`).
 6.  **Test:**
-    * Run any local tests (e.g., `npm test`) for the repository you're in.
-    * If your change affects other pillars, please describe the scenario in your Pull Request. The core team will run it against our central **`ecosystem-qa`** test suite.
+    * Run the local tests for the component(s) you changed (e.g., `npm test` in the `hub/api` directory).
+    * Run the **intra-pillar integration tests** at the root of the monorepo (e.g., `npm test:integration` in the `hub` repo's root).
+    * If your change affects other *repositories* (like `hub` and `hub-worker-sync`), please describe the scenario in your Pull Request. The core team will run it against our central **`ecosystem-qa`** test suite.
 7.  **Submit a Pull Request (PR):**
     * Push your branch to your fork.
     * Open a Pull Request from your branch to the `main` branch of the `nova-ecosystem` repository.
@@ -122,11 +122,11 @@ We follow a standard "fork-and-pull" Git workflow.
 
 ## 📖 Our Development Standards
 
-* **API Design:** Our internal services use **gRPC/Protobuf** for high performance and upgradability. Our public-facing API (`ecosystem-api`) translates these into **REST/JSON** for ease of use.
+* **API Design:** Our internal services use **gRPC/Protobuf** for high performance and upgradability. Our public-facing API (in the **`ecosystem-core`** repo) translates these into **REST/JSON** for ease of use.
 * **Versioning:** We use a hybrid model:
-    * **SemVer (e.g., `v1.2.0`)** for all individual packages, libraries, and APIs.
-    * **CalVer (e.g., `v2025.11.0`)** for our high-level "Ecosystem Release" (a "meta-package" of tested, compatible SemVer packages).
-* **Code Style:** Most of our projects use `Prettier` and `ESLint` (for JS/TS) or equivalent linters. Please check the local `README.md` and `package.json` of the repo you're working in.
+    * **SemVer (e.g., `v1.2.0`)** for all individual release artifacts (our `.tar.gz` packages).
+    * **CalVer (e.g., `v2025.11.0`)** for our high-level "Ecosystem Release" (a "meta-package" of tested, compatible SemVer artifacts).
+* **Code Style:** Most of our projects use `Prettier` and `ESLint` (for JS/TS) or equivalent linters. Please check the local `README.md` and `package.json` of the component you're working in.
 
 ### Label & Project Hygiene (For Maintainers)
 * We run an org-wide label sync from `.github/labels.json`. Do not rename official labels locally; open an issue in this repo to discuss changes.

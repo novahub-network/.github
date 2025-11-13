@@ -13,48 +13,32 @@ Our mission is to engineer the interconnected pillars—from finance and AI to m
 
 ### 🏗️ Our Architecture
 
-Our ecosystem is a **"Hub-and-Spoke"** model. The repositories in this organization are grouped into four main categories, all identifiable by their prefixes.
+Our architecture is a "monorepo" model designed for atomic, coordinated development. Instead of many small repos for each app/api/website, each pillar's core components are grouped into a single repository.
 
-#### 1. Core Ecosystem Services (Prefix: `ecosystem-`)
-This is the "Hub" or "meta-pillar" that runs the entire system. It provides the central services that all other pillars consume.
+#### 1. The Core Monorepo: `ecosystem-core`
+This is the "heart" of the ecosystem. It's a monorepo containing all the tightly-coupled central services:
+* `/api`: The central API Gateway.
+* `/app`: The "Mission Control" dashboard.
+* `/auth`: The unified "passport" (SSO/Identity) service.
+* `/website`: The Docusaurus site for `nova-ecosystem.org` and all high-level docs.
 
-* **`ecosystem-website`:** The main informational "user manual" and documentation.
-* **`ecosystem-auth`:** The unified "passport" (SSO, KYC, auth) for all users.
-* **`ecosystem-app`:** The central "Mission Control" dashboard for profile management.
-* **`ecosystem-api`:** The central API Gateway (the "front door" for all services).
-* **`ecosystem-qa`:** Cross-pillar integration tests, QA, and E2E test suites.
+#### 2. Pillar Monorepos (e.g., `hub`, `finance`, `agro`)
+One monorepo for each pillar's core product. This allows a single, atomic pull request to update the API, App, and Website for a new feature.
+* **Example (`hub` repo):**
+    * `/api`: Code for the `hub-api` artifact.
+    * `/app`: Code for the `hub-app` artifact.
+    * `/website`: Code for the `hub-website` artifact.
+    * `/tests`: **Intra-pillar tests** (testing `/api` and `/app` *together*).
 
-#### 2. Enabler Pillars (Prefix: `pillar-*` topic)
-The horizontal "OS" providing the core infrastructure and capabilities for the economy.
+#### 3. Decoupled Worker Repos (e.g., `hub-worker-sync`)
+These are specialized, single-purpose backend services (like data importers or background jobs) that are developed and deployed independently from the core pillars for better scalability and fault isolation.
 
-* **`hub-` (Novahub):** The collaboration engine for projects and partners.
-* **`finance-` (Novafinance):** The capital engine for green loans, bonds, and ESG finance.
-* **`markets-` (Novatrade):** The trading backbone for circular commodities.
-* **`ai-` (Novasapien):** The intelligence layer (AI, IoT, digital twins).
-* **`energy-` (Novaelectron):** The power grid for renewable energy and smart grids.
-* **`material-` (Novamaterial):** The R&D lab for sustainable materials and recycling tech.
-* **`mobility-` (Novamobility):** The logistics network for EV fleets and reverse logistics.
-* **`infra-` (Novainfra):** The physical backbone for circular industrial parks.
-* **`skills-` (Novaskills):** The human capital engine for training and "circular job" certifications.
-* **`balance-` (Novabalance):** The environmental auditor (the "E" in ESG).
-* **`equity-` (Novaequity):** The social auditor (the "S" in ESG).
-* **`policy-` (Novapolicy):** The "rulebook" setting standards for governance and compliance (the "G" in ESG).
+#### 4. Central Governance Repos
+* **`ecosystem-qa`:** This repo tests the "seams" *between* repositories (e.g., tests `hub` <-> `finance`, or `hub` <-> `hub-worker-sync`).
+* **`ecosystem-releases`:** Hosts the CalVer-tagged `release-manifest.json` files that define each stable ecosystem release.
 
-#### 3. Sector Pillars (Prefix: `sector-*` topic)
-The vertical "applications" where the enablers are applied to specific industries.
-
-* **`agro-` (Novaagro):** Regenerative agriculture and food systems.
-* **`water-` (Novawater):** Water purification, recycling, and smart irrigation.
-* **`build-` (Novabuild):** Circular construction and smart buildings.
-* **`textile-` (Novatextile):** Fiber-to-fiber recycling and circular fashion.
-* **`waste-` (Novawaste):** Resource recovery, e-waste mining, and waste-to-value.
-* **`air-` (Novaair):** Air quality monitoring, pollution control, and carbon capture.
-* **`health-` (Novahealth):** Circular healthcare and preventative wellness.
-
-#### 4. Products (Prefix: `product-*` topic)
-These are standalone "flagship" products that *consume* services from multiple pillars and sectors.
-
-* **Example: `durasagv-`** (An autonomous agricultural vehicle that uses the `ai-` pillar and the `agro-` sector).
+#### 5. Product Repos (e.g., `durasagv`)
+Standalone "flagship" product monorepos that *consume* services from multiple pillars (e.g., `ai` and `agro`).
 
 ---
 
@@ -63,12 +47,12 @@ These are standalone "flagship" products that *consume* services from multiple p
 We welcome contributors of all kinds—from code and documentation to design and policy standards. The best place to start is our main [Contribution Guide](../CONTRIBUTING.md).
 
 #### Finding Your Way
-With over 40 repositories, here's how to find what you're looking for:
+Our new monorepo structure makes it easy to find what you're looking for:
 
-1.  **Start at the Core:** Our `ecosystem-website` and `ecosystem-app` repos are the best places to understand the core system.
-2.  **Browse the Pillars:** See which pillar or sector above interests you most.
-3.  **Explore Products:** Check out our `durasagv-` repos to see how the ecosystem comes together.
-4.  **Filter by Topic:** We use topics like `pillar-hub`, `sector-agro`, `product`, and `help-wanted` to organize work.
+1.  **Start at the Core:** The **`ecosystem-core`** repo is the best place to understand the central platform.
+2.  **Browse the Pillars:** Pick a **Pillar Monorepo** (e.g., **`hub`**, **`agro`**, **`balance`**) that matches your interests. You can find the API, App, and Website all in one place.
+3.  **Explore Products:** Check out our product repos (like **`durasagv`**) to see how the ecosystem comes together.
+4.  **Find Backend Tasks:** Browse the **`worker-`** repositories for decoupled, single-purpose microservice tasks.
 
 ---
 We are committed to fostering an open and welcoming environment. Please read our [Code of Conduct](../CODE_OF_CONDUCT.md) before participating.

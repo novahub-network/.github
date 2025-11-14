@@ -4,7 +4,7 @@ Thank you for your interest in contributing to the open-source operating system 
 
 Whether you're a developer, designer, policy expert, or just passionate about sustainability, your contributions are welcome and valued. This document is the "getting started" guide for our entire ecosystem.
 
-First, please read our **[Code of Conduct](https://www.google.com/search?q=./CODE_OF_CONDUCT.md)**. We are committed to maintaining an open, welcoming, and respectful community for all.
+First, please read our **[Code of Conduct](./CODE_OF_CONDUCT.md)**. We are committed to maintaining an open, welcoming, and respectful community for all.
 
 ## 🗺️ How Our Organization is Structured
 
@@ -17,7 +17,7 @@ Our organization uses a "monorepo" model to group related code, making it easier
 5.  **Central Governance** (e.g., `ecosystem-qa`, `ecosystem-releases`): Repos that manage testing *between* repositories and define our official releases.
 6.  **Products** (e.g., `durasagv`): Standalone "flagship" product monorepos that consume services from multiple **Enablers** and **Sectors**.
 
-You can read a full description of every repository on our [organization](https://github.com/nova-ecosystem).
+You can read a full description of every repository on our [**Organization README**](https://github.com/nova-ecosystem).
 
 ## 🚀 How to Get Started
 
@@ -34,16 +34,17 @@ Want to dive in? We've made it easy to find a place to start.
 
 1.  **Start with Documentation:** The easiest way to contribute is to help with our docs. Find a typo, a confusing sentence, or suggest a new guide.
 
-      * **Go to the docs directory:** [**`ecosystem-core/website`**](https://www.google.com/search?q=%5Bhttps://github.com/nova-ecosystem/ecosystem-core/tree/main/website%5D\(https://github.com/nova-ecosystem/ecosystem-core/tree/main/website\))
+      * **Go to the docs directory:** [**`ecosystem-core/website`**](https://github.com/nova-ecosystem/ecosystem-core/tree/main/website)
 
 2.  **Find a Beginner-Friendly Task:** We tag simple, well-scoped tasks just for new contributors.
 
-      * **Browse `good first issues`:** [**Find all `good first issue 🌱` tasks**](https://www.google.com/search?q=%5Bhttps://github.com/search%3Fq%3Dorg%253Anova-ecosystem%2Bis%253Aopen%2Bis%253Aissue%2Blabel%253A%2522good%2Bfirst%2Bissue%2B%25F0%259F%258C%25B1%2522%5D\(https://github.com/search%3Fq%3Dorg%253Anova-ecosystem%2Bis%253Aopen%2Bis%253Aissue%2Blabel%253A%2522good%2Bfirst%2Bissue%2B%25F0%259F%258C%25B1%2522\))
-      * **Check the Ecosystem Development Roadmap: **[roadmap](https://github.com/orgs/nova-ecosystem/projects/1/views/6)
+    * **Browse `good first issues`:** [**Find all `good first issue 🌱` tasks**](https://github.com/search?q=org%3Anova-ecosystem+is%3Aopen+is%3Aissue+label%3A%22good+first+issue+%F0%9F%8C%B1%22)
+
+    * **Check the Ecosystem Development Roadmap:** [**View the `Good First Issues 🌱` Roadmap**](https://github.com/orgs/nova-ecosystem/projects/1/views/6)
 
 3.  **Help Where It's Wanted:** Look for tasks the core team has specifically requested help on.
 
-      * **Browse `help wanted` issues:** [**Find all `help wanted 🤝` tasks**](https://www.google.com/search?q=%5Bhttps://github.com/search%3Fq%3Dorg%253Anova-ecosystem%2Bis%253Aopen%2Bis%253Aissue%2Blabel%253A%2522help%2Bwanted%2B%25F0%259F%25A4%259D%2522%5D\(https://github.com/search%3Fq%3Dorg%253Anova-ecosystem%2Bis%253Aopen%2Bis%253Aissue%2Blabel%253A%2522help%2Bwanted%2B%25F0%259F%25A4%259D%2522\))
+      * **Browse `help wanted` issues:** [**Find all `help wanted 🤝` tasks**](https://github.com/search?q=org%3Anova-ecosystem+is%3Aopen+is%3Aissue+label%3A%22help+wanted+%F0%9F%A4%9D%22)
 
 4.  **Pick Up a "Ready" Task:** Once you're more comfortable, you can grab any task that's fully scoped and ready to be built.
 

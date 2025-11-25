@@ -1,98 +1,96 @@
-# Welcome to the Nova Ecosystem\!
+# 🌍 NovaEco — The Open‑Source Operating System for a Circular Economy
 
-We are an open-source community building the **open-source operating system for a circular economy.**
+NovaEco is an open‑source community building the **system‑of‑systems** needed to transition our planet to a sustainable, circular model.  
+We engineer the interconnected **Horizontal Enablers** and **Vertical Sectors** that empower individuals, companies, and governments to collaborate transparently.
 
-Our mission is to engineer the interconnected **Horizontal Enablers** and **Vertical Sectors** needed to transition our planet to a sustainable, circular model. The Nova Ecosystem is stewarded by the (future) non-profit **Nova Foundation gGmbH** and commercially supported by **[Circular Engineering Nova GmbH](https://circular.engineering/)**.
+NovaEco is commercially supported by **[Circular Engineering Nova GmbH](https://circular.engineering/)**.
 
-  * 🌐 **Ecosystem Hub:** [**nova-ecosystem.org**](https://nova-ecosystem.org) (The main "user manual")
-  * 🚀 **Central App:** [**app.nova-ecosystem.org**](https://app.nova-ecosystem.org) (Your "Mission Control" dashboard)
-  * 📚 **Documentation:** [**nova-ecosystem.org/docs**](https://nova-ecosystem.org/docs) (Architecture, Guides, & API Docs)
-  * 💬 **Email Us:** [**contact@nova-ecosystem.org**](mailto:contact@nova-ecosystem.org)
+---
 
------
+## 🚀 Key Entry Points
 
-### 🏗️ Our Architecture
+- 🌐 **Website & Docs:** [novaeco.tech](https://novaeco.tech) — Architecture, guides, and contributor documentation  
+- 📊 **Central App:** [app.novaeco.tech](https://app.novaeco.tech) — Your “Mission Control” dashboard  
+- 🔗 **API Gateway:** [api.novaeco.tech](https://api.novaeco.tech) — Unified REST API front door  
+- 🔐 **Identity Service:** [auth.novaeco.tech](https://auth.novaeco.tech) — SSO & contributor passports  
+- 💬 **Contact:** [contact@novaeco.tech](mailto:contact@novaeco.tech)
 
-Our architecture is a "monorepo" model designed for atomic, coordinated development. Instead of many small repos for each app/api/website, each **Horizontal Enabler's** or **Vertical Sector's** core components are grouped into a single repository.
+---
 
-#### 1\. The Core Monorepo: `ecosystem-core`
+## 🏗️ Architecture Overview
 
-This is the "heart" of the ecosystem. It's a monorepo containing all the tightly-coupled central services:
+NovaEco follows a **monorepo model** for atomic, coordinated development. Instead of scattering code across many small repos, each **Enabler** or **Sector** groups its API, App, Website, and Tests together.
 
-  * `/api`: The central API Gateway.
-  * `/app`: The "Mission Control" dashboard.
-  * `/auth`: The unified "passport" (SSO/Identity) service.
-  * `/website`: The Docusaurus site for `nova-ecosystem.org` and all high-level docs.
+### 1. Core Monorepo — [`ecosystem-core`](https://github.com/novaeco-tech/ecosystem-core)
+The “heart” of the ecosystem, containing the tightly‑coupled central services:
+- `/api` — Central API Gateway  
+- `/app` — Mission Control dashboard  
+- `/auth` — Identity & SSO provider  
+- `/website` — Public docs and landing site (Docusaurus)
 
-#### 2\. Horizontal Enabler Monorepos
+### 2. Horizontal Enabler Monorepos
+Cross‑cutting foundational services:
+- **NovaHub** — project creation, community coordination, ecosystem‑wide search.  
+- **NovaFin** — tokens, staking, payments, revenue sharing, investment.
+- **NovaMarkets** — decentralized marketplace for goods, services, and assets. 
+- **NovaSapien** — shared artificial intelligence and ML models.  
+- **NovaEnergy** — renewable energy production, distribution, and auditing.
+- **NovaMaterial** — Digital Product Passports (DPPs), lifecycle tracking of raw/recycled materials. 
+- **NovaMobility** — circular logistics and sustainable transport coordination.  
+- **NovaInfra** — shared digital/physical infrastructure.  
+- **NovaSkills** — education, skill‑sharing, labor coordination.
+- **NovaPolicy** — governance, compliance, legal frameworks.
+- **NovaBalance** — environmental auditing, proof of ecological impact.
+- **NovaEquity** — ssocial auditing, proof of fairness and social impact.
 
-One monorepo for each cross-cutting, foundational service. This allows a single, atomic pull request to update the API, App, and Website for a new feature.
+### 3. Vertical Sector Monorepos
+Industry‑specific applications consuming Enablers:
+- **NovaAgro** — sustainable agriculture, bio‑nutrients, post‑harvest processing.  
+- **NovaWater** — water resource management, sustainable use, ecosystem restoration.
+- **NovaBuild** — sustainable construction, circular building materials, built environment.
+- **NovaTextile** — texlifecycle of textiles, sustainable sourcing, recycling, reuse.
+- **NovaWaste** — waste‑to‑value streams, recycling, circular waste management.
+- **NovaAir** — air quality monitoring, environmental credits.  
+- **NovaHealth** — circular economy principles in healthcare and life sciences.
+- **NovaPack** — reusable and circular packaging systems, deposit models, reverse logistics, inventory management.  
+- **NovaTronix** — sustainable electronics and e‑waste management, modular design, repair, recycling, and material recovery.
+- **NovaChem** — sustainable chemical processes, leasing models, and closed‑loop industrial chemistry.
 
-  * **Our Enablers:**
-      * **`hub`**: The central service for project creation, community coordination, and ecosystem-wide search.
-      * **`finance`**: Manages ecosystem tokens, staking, revenue sharing, and investment opportunities.
-      * **`markets`**: A decentralized marketplace for circular economy goods, services, and assets.
-      * **`ai`**: Provides shared artificial intelligence and machine learning models for the ecosystem.
-      * **`energy`**: Manages decentralized and renewable energy production, distribution, and auditing.
-      * **`material`**: Tracks the lifecycle of raw and recycled materials (digital product passports).
-      * **`mobility`**: Coordinates circular logistics and sustainable transportation services.
-      * **`infra`**: Manages shared digital and physical infrastructure for ecosystem projects.
-      * **`skills`**: A platform for education, skill-sharing, and labor coordination for the circular economy.
-      * **`policy`**: Manages ecosystem governance, legal frameworks, and compliance standards.
-      * **`balance`**: The environmental auditing enabler, providing verifiable proof of ecological impact.
-      * **`equity`**: The social auditing enabler, providing verifiable proof of social impact and fairness.
-  * **Example (`hub` repo):**
-      * `/api`: Code for the `hub-api` artifact.
-      * `/app`: Code for the `hub-app` artifact.
-      * `/website`: Code for the `hub-website` artifact.
-      * `/tests`: **Intra-Enabler tests** (testing `/api` and `/app` *together*).
+### 4. Worker Repos
+Decoupled, single‑purpose backend services (e.g., `novahub-worker-sync`, `novabalance-worker-impact-calculator`) for scalability and fault isolation.
+They handle background jobs such as:
+- Data ingestion and normalization
+- Automated LCA calculations
+- Compliance checks
+- Logistics optimization
 
-#### 3\. Vertical Sector Monorepos
+Workers are independent for scalability and fault isolation.
 
-One monorepo for each industry-specific application. These **Sectors** *consume* the services from the **Enablers**.
+### 5. Product Repos
+Flagship applications that consume multiple enablers and sectors:
+- **DurasAGV** – autonomous logistics robots integrating AI and Agro.
+- **Urban Mining Coordination** – orchestration app combining Build, Waste, and Mobility.
+- **Reusable Packaging Systems** – products integrating Pack, Mobility, and Water.
+- **City‑Wide Loop** – unified reusable cup system across entire cities.
+- **Circular Hospital** – healthcare equipment leasing and reuse models.
 
-  * **Our Sectors:**
-      * **`agro`**: Manages sustainable agriculture, from organic farming and bio-nutrients to post-harvest processing.
-      * **`water`**: Manages and protects water resources, including drinking water, sustainable use, and ecosystem restoration.
-      * **`build`**: Focuses on sustainable construction, circular building materials, and the built environment.
-      * **`textile`**: Manages the lifecycle of textiles, from sustainable sourcing to recycling and reuse.
-      * **`waste`**: Coordinates waste-to-value streams, recycling, and circular waste management.
-      * **`air`**: Monitors and manages air quality data and related environmental credits.
-      * **`health`**: Focuses on circular economy principles within the healthcare and life sciences sector.
-  * **Example (`agro` repo):**
-      * `/api`: Code for the `agro-api` artifact.
-      * `/app`: Code for the `agro-app` artifact.
-      * `/website`: Code for the `agro-website` artifact.
-      * `/tests`: **Intra-Sector tests** (testing `/api` and `/app` *together*).
+### 6. Governance Repos
+- **ecosystem‑qa** — tests the seams between Enablers and Sectors  
+- **ecosystem‑releases** — CalVer‑tagged release manifests
 
-#### 4\. Decoupled Worker Repos (e.g., `hub-worker-sync`)
+---
 
-These are specialized, single-purpose backend services (like data importers or background jobs) that are developed and deployed independently from the core **Enablers** and **Sectors** for better scalability and fault isolation.
+## 🤝 Contributing
 
-#### 5\. Central Governance Repos
+We welcome contributors of all kinds — code, docs, design, and governance.  
+Start with our [Contribution Guide](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
-  * **`ecosystem-qa`:** This repo tests the "seams" *between* repositories (e.g., tests `hub` \<-\> `finance` (Enabler-to-Enabler), or `hub` \<-\> `agro` (Enabler-to-Sector)).
-  * **`ecosystem-releases`:** Hosts the CalVer-tagged `release-manifest.json` files that define each stable ecosystem release.
+**Finding your way:**
+1. Begin with [`ecosystem-core`](https://github.com/novaeco-tech/ecosystem-core) to understand the platform.  
+2. Explore Enabler or Sector repos that match your interests.  
+3. Check out product repos to see how everything comes together.  
+4. Look at worker repos for backend microservices.
 
-#### 6\. Product Repos (e.g., `durasagv`)
+---
 
-Standalone "flagship" product monorepos that *consume* services from multiple **Enablers** (e.g., `ai`) and **Sectors** (e.g., `agro`).
-
------
-
-### 🚀 How to Get Involved
-
-We welcome contributors of all kinds—from code and documentation to design and policy standards. The best place to start is our main [Contribution Guide](../CONTRIBUTING.md).
-
-#### Finding Your Way
-
-Our new monorepo structure makes it easy to find what you're looking for:
-
-1.  **Start at the Core:** The **`ecosystem-core`** repo is the best place to understand the central platform.
-2.  **Browse the Enablers & Sectors:** Pick a **Horizontal Enabler** (e.g., **`hub`**, **`balance`**) or a **Vertical Sector** (e.g., **`agro`**) that matches your interests. You can find the API, App, and Website all in one place.
-3.  **Explore Products:** Check out our product repos (like **`durasagv`**) to see how the ecosystem comes together.
-4.  **Find Backend Tasks:** Browse the **`worker-`** repositories for decoupled, single-purpose microservice tasks.
-
------
-
-We are committed to fostering an open and welcoming environment. Please read our [Code of Conduct](../CODE_OF_CONDUCT.md) before participating.
+NovaEco is committed to openness, transparency, and collaboration. Together we can build the operating system for a truly circular economy.

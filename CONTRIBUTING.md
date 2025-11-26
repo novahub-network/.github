@@ -1,4 +1,4 @@
-# 👋 Welcome to the Nova Ecosystem\!
+# 👋 Welcome to the NovaEco\!
 
 Thank you for your interest in contributing to the open-source operating system for a circular economy\! We are thrilled to have you here.
 

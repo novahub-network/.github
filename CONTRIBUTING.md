@@ -11,13 +11,13 @@ First, please read our **[Code of Conduct](./CODE_OF_CONDUCT.md)**. We are commi
 Our organization uses a "monorepo" model to group related code, making it easier to develop and test features atomically.
 
 1.  **`ecosystem-core`**: **The Core Monorepo.** This is the "heart" that runs the entire system. It contains our central `/api` (Gateway), `/auth` (Identity), `/app` (Dashboard), and `/website` (Docs).
-2.  **Horizontal Enabler Monorepos** (e.g., `hub`, `finance`, `balance`): **The Foundational Services.** These are the cross-cutting, shared services (like identity, finance, or auditing) that all sectors consume.
-3.  **Vertical Sector Monorepos** (e.g., `agro`, `water`, `build`): **The Industry Applications.** These are the end-user-facing applications for a specific market, which are built by *consuming* the enablers.
-4.  **Decoupled Workers** (e.g., `hub-worker-sync`): **Backend Services.** These are separate, single-purpose repos for background tasks, developed and deployed independently.
+2.  **Horizontal Enabler Monorepos** (e.g., `novahub`, `novafin`, `novabalance`): **The Foundational Services.** These are the cross-cutting, shared services (like finance, or auditing) that all sectors consume.
+3.  **Vertical Sector Monorepos** (e.g., `novaagro`, `novawater`, `novabuild`): **The Industry Applications.** These are the end-user-facing applications for a specific market, which are built by *consuming* the enablers.
+4.  **Decoupled Workers** (e.g., `novahub-worker-sync`): **Backend Services.** These are separate, single-purpose repos for background tasks, developed and deployed independently.
 5.  **Central Governance** (e.g., `ecosystem-qa`, `ecosystem-releases`): Repos that manage testing *between* repositories and define our official releases.
-6.  **Products** (e.g., `durasagv`): Standalone "flagship" product monorepos that consume services from multiple **Enablers** and **Sectors**.
+6.  **Products** (e.g., `product-durasagv`): Standalone "flagship" product monorepos that consume services from multiple **Enablers** and **Sectors**.
 
-You can read a full description of every repository on our [**Organization README**](https://github.com/nova-ecosystem).
+You can read a full description of every repository on our [**Organization README**](https://github.com/novaeco-tech).
 
 ## 🚀 How to Get Started
 
@@ -25,8 +25,8 @@ You can read a full description of every repository on our [**Organization READM
 
 To understand our vision and where we're headed, start with our high-level planning tools:
 
-  * **Ecosystem Development Roadmap:** Our main [**project board**](https://github.com/orgs/nova-ecosystem/projects/1) tracks major, cross-ecosystem initiatives and high-level features.
-  * **Ecosystem Discussions:** For brainstorming, Q\&A, and early-stage idea refinement, join our [discussions](https://github.com/orgs/nova-ecosystem/discussions/).
+  * **Ecosystem Development Roadmap:** Our main [**project board**](https://github.com/orgs/novaeco-tech/projects/1) tracks major, cross-ecosystem initiatives and high-level features.
+  * **Ecosystem Discussions:** For brainstorming, Q\&A, and early-stage idea refinement, join our [discussions](https://github.com/orgs/novaeco/discussions/).
 
 ### 2\. Find Your First Contribution
 
@@ -34,21 +34,21 @@ Want to dive in? We've made it easy to find a place to start.
 
 1.  **Start with Documentation:** The easiest way to contribute is to help with our docs. Find a typo, a confusing sentence, or suggest a new guide.
 
-      * **Go to the docs directory:** [**`ecosystem-core/website`**](https://github.com/nova-ecosystem/ecosystem-core/tree/main/website)
+      * **Go to the docs directory:** [**`ecosystem-core/website`**](https://github.com/novaeco-tech/ecosystem-core/tree/main/website)
 
 2.  **Find a Beginner-Friendly Task:** We tag simple, well-scoped tasks just for new contributors.
 
-    * **Browse `good first issues`:** [**Find all `good first issue 🌱` tasks**](https://github.com/search?q=org%3Anova-ecosystem+is%3Aopen+is%3Aissue+label%3A%22good+first+issue+%F0%9F%8C%B1%22)
+    * **Browse `good first issues`:** [**Find all `good first issue 🌱` tasks**](https://github.com/search?q=org%3Anovaeco-tech+is%3Aopen+is%3Aissue+label%3A%22good+first+issue+%F0%9F%8C%B1%22)
 
-    * **Check the Ecosystem Development Roadmap:** [**View the `Good First Issues 🌱` Roadmap**](https://github.com/orgs/nova-ecosystem/projects/1/views/6)
+    * **Check the Ecosystem Development Roadmap:** [**View the `Good First Issues 🌱` Roadmap**](https://github.com/orgs/novaeco-tech/projects/1/views/6)
 
 3.  **Help Where It's Wanted:** Look for tasks the core team has specifically requested help on.
 
-      * **Browse `help wanted` issues:** [**Find all `help wanted 🤝` tasks**](https://github.com/search?q=org%3Anova-ecosystem+is%3Aopen+is%3Aissue+label%3A%22help+wanted+%F0%9F%A4%9D%22)
+      * **Browse `help wanted` issues:** [**Find all `help wanted 🤝` tasks**](https://github.com/search?q=org%3Anovaeco-tech+is%3Aopen+is%3Aissue+label%3A%22help+wanted+%F0%9F%A4%9D%22)
 
 4.  **Pick Up a "Ready" Task:** Once you're more comfortable, you can grab any task that's fully scoped and ready to be built.
 
-      * **View the "Ready" column:** [table](https://github.com/orgs/nova-ecosystem/projects/1/views/4)
+      * **View the "Ready" column:** [table](https://github.com/orgs/novaeco-tech/projects/1/views/4)
 
 -----
 
@@ -90,8 +90,8 @@ Filter issues and the roadmap by the labels that describe the skills or input re
   * **`needs dev 💻`** — Requires coding or engineering expertise.
   * **`needs docs 📝`** — Requires technical writing or documentation updates.
   * **`needs design 🖌️`** — Needs UX/UI or visual design input.
-  * **`needs expert-input 🎯`** — Needs subject-matter expertise (e.g., in a **Vertical Sector** like `agro` or a **Horizontal Enabler** like `finance`).
-  * **`needs legal 📜`** — Requires legal or compliance review (e.g., for **Enablers** like `policy` or `finance`).
+  * **`needs expert-input 🎯`** — Needs subject-matter expertise (e.g., in a **Vertical Sector** like `novaagro` or a **Horizontal Enabler** like `novafin`).
+  * **`needs legal 📜`** — Requires legal or compliance review (e.g., for **Enablers** like `novapolicy` or `novafin`).
   * **`needs pm 📊`** — Requires product management input for scope, acceptance criteria, or prioritization.
 
 -----
@@ -100,7 +100,7 @@ Filter issues and the roadmap by the labels that describe the skills or input re
 
 ### 1\. How Triage Works
 
-Our workflow is managed using the [project board](https://github.com/orgs/nova-ecosystem/projects/1/).
+Our workflow is managed using the [project board](https://github.com/orgs/novaeco-tech/projects/1/).
 
   * **Triage:** The inbox for new issues. Maintainers review, add labels from the official set, set **Type**, **Priority**, and **Difficulty**, and move the item to the `Ready` column.
   * **Ready:** Fully scoped and prioritized issues ready for contributors to pick up. **This is the main column to find work.**
@@ -112,21 +112,21 @@ Our workflow is managed using the [project board](https://github.com/orgs/nova-e
 
 We follow a standard "fork-and-pull" Git workflow.
 
-1.  **Find an Issue:** Find an issue in the **`Ready`** column of our [project board](https://github.com/orgs/nova-ecosystem/projects/1) that you want to work on.
+1.  **Find an Issue:** Find an issue in the **`Ready`** column of our [project board](https://github.com/orgs/novaeco-tech/projects/1) that you want to work on.
 2.  **Claim it:** Comment on the issue to say you want it. A maintainer will assign it to you and move it to **`In Progress`**.
-3.  **Fork:** Fork the specific monorepo (e.g., `hub` or `ecosystem-core`) to your personal GitHub account.
+3.  **Fork:** Fork the specific monorepo (e.g., `novahub` or `ecosystem-core`) to your personal GitHub account.
 4.  **Create a Branch:** Create a new branch with a descriptive name. We recommend:
       * `feat/your-feature-name` (for new features)
       * `fix/bug-description` (for bug fixes)
       * `docs/topic-you-are-updating` (for documentation)
 5.  **Code & Commit:** Make your changes. Write clear, atomic commits. We strongly recommend [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) (e.g., `feat: add user login button`, `docs: fix typo in README`).
 6.  **Test:**
-      * Run the local tests for the component(s) you changed (e.g., `npm test` in the `hub/api` directory).
-      * Run the **intra-enabler/intra-sector integration tests** at the root of the monorepo (e.g., `npm test:integration` in the `hub` repo's root).
-      * If your change affects other *repositories* (like `hub` and `hub-worker-sync`), please describe the scenario in your Pull Request. The core team will run it against our central **`ecosystem-qa`** test suite.
+      * Run the local tests for the component(s) you changed (e.g., `npm test` in the `novahub/api` directory).
+      * Run the **intra-enabler/intra-sector integration tests** at the root of the monorepo (e.g., `npm test:integration` in the `novahub` repo's root).
+      * If your change affects other *repositories* (like `novahub` and `novahub-worker-sync`), please describe the scenario in your Pull Request. The core team will run it against our central **`ecosystem-qa`** test suite.
 7.  **Submit a Pull Request (PR):**
       * Push your branch to your fork.
-      * Open a Pull Request from your branch to the `main` branch of the `nova-ecosystem` repository.
+      * Open a Pull Request from your branch to the `main` branch of the `novaeco-tech` repository.
       * **Link your PR to the issue** (e.g., "Closes \#123"). This will automatically move the issue to the **`In Review`** column.
       * Fill out the PR template with a clear description of *what* you did and *why*.
 8.  **Review:** A core team member will review your code, provide feedback, and merge it when it's ready.
@@ -148,12 +148,12 @@ We follow a standard "fork-and-pull" Git workflow.
 
 ## 🛡️ Security Vulnerability Reporting
 
-Please **do not** report security vulnerabilities on the public issue tracker. If you find a security issue, please send a private email to **`security@nova-ecosystem.org`**.
+Please **do not** report security vulnerabilities on the public issue tracker. If you find a security issue, please send a private email to **`security@novaeco.tech`**.
 
 ## 💬 Get in Touch
 
-  * **General Questions:** Use our **[discussions board](https://github.com/orgs/nova-ecosystem/discussions)**.
+  * **General Questions:** Use our **[discussions board](https://github.com/orgs/novaeco-tech/discussions)**.
   * **Specific Bugs/Features:** Use the **Issues** tab on the specific repository.
-  * **Corporate/Legal:** [contact@nova-ecosystem.org](mailto:contact@nova-ecosystem.org)
+  * **Corporate/Legal:** [contact@novaeco.tech](mailto:contact@novaeco.tech)
 
 Thank you for helping us build the future of the circular economy\!

@@ -30,9 +30,9 @@ The “heart” of the ecosystem, containing the tightly‑coupled central servi
 
 ### 2. Horizontal Enabler Monorepos
 Cross‑cutting foundational services:
-- **NovaHub** — project creation, community coordination, ecosystem‑wide search.  
+- **NovaHub** — innovation wizard, complex problem decomposition, orchestration.  
 - **NovaFin** — tokens, staking, payments, revenue sharing, investment.
-- **NovaTrade** — decentralized marketplace for goods, services, and assets. 
+- **NovaTrade** — decentralized marketplace for goods, services, and assets.
 - **NovaSapien** — shared artificial intelligence and ML models.  
 - **NovaEnergy** — renewable energy production, distribution, and auditing.
 - **NovaMaterial** — Digital Product Passports (DPPs), lifecycle tracking of raw/recycled materials. 

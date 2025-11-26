@@ -26,7 +26,7 @@ You can read a full description of every repository on our [**Organization READM
 To understand our vision and where we're headed, start with our high-level planning tools:
 
   * **Ecosystem Development Roadmap:** Our main [**project board**](https://github.com/orgs/novaeco-tech/projects/1) tracks major, cross-ecosystem initiatives and high-level features.
-  * **Ecosystem Discussions:** For brainstorming, Q\&A, and early-stage idea refinement, join our [discussions](https://github.com/orgs/novaeco/discussions/).
+  * **Ecosystem Discussions:** For brainstorming, Q\&A, and early-stage idea refinement, join our [discussions](https://github.com/orgs/novaeco-tech/discussions/).
 
 ### 2\. Find Your First Contribution
 

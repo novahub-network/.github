@@ -1,7 +1,7 @@
 name: Sync Repository Labels
 description: |
   Automatically sync issue labels across all repositories in the organization based on a central configuration file.
-  Note that the organization's default labels must be manually updated at https://github.com/organizations/novahub-network/settings/repository-defaults
+  Note that the organization's default labels must be manually updated at https://github.com/organizations/novaeco-tech/settings/repository-defaults
 
 on:
   schedule:

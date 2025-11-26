@@ -3,7 +3,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: 🤔 Ask a Question or Share an Idea
-    url: https://github.com/orgs/novahub-network/discussions
+    url: https://github.com/orgs/novaeco-tech/discussions
     about: Have a general question or a new idea for a feature? Please start a discussion first.
 
   - name: 💬 Community Chat
@@ -11,9 +11,9 @@ contact_links:
     about: Join our community for real-time conversations and quick questions.
 
   - name: 📚 Read the Documentation
-    url: https://novahub.network/docs/
+    url: https://novaeco.tech/docs/
     about: Please check our documentation for answers to common questions before submitting an issue.
 
   - name: 🗺️ View Our Development Roadmap
-    url: https://github.com/orgs/novahub-network/projects/1
+    url: https://github.com/orgs/novaeco-tech/projects/1
     about: Check if your feature idea is already on our development roadmap.

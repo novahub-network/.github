@@ -1,10 +1,10 @@
 ## Security Policy
-The NovaHub Network team and community take security issues seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
+The NovaEco team and community take security issues seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
 ### Reporting a Vulnerability
 Please do not report security vulnerabilities through public GitHub issues.
 
-Instead, please report them directly to our security team at security@novahub.network.
+Instead, please report them directly to our security team at security@novaeco.tech.
 
 Please include the following details in your report:
 * A description of the vulnerability and its potential impact.

@@ -1,7 +1,7 @@
-# 🌍 NovaEco — The Open‑Source Operating System for a Circular Economy
+# 🌍 NovaEco — Digital Public Infrastructure for the Circular Economy
 
-NovaEco is an open‑source community building the **system‑of‑systems** needed to transition our planet to a sustainable, circular model.  
-We engineer the interconnected **Horizontal Enablers** and **Vertical Sectors** that empower individuals, companies, and governments to collaborate transparently.
+**NovaEco** is the open‑source **Digital Public Infrastructure** for the circular economy.  
+It connects individuals and siloed sectors to **foster innovation**, measure impact, and **collaborate** within a federated system-of-systems.
 
 NovaEco is commercially supported by **[Circular Engineering Nova GmbH](https://circular.engineering/)**.
 
@@ -9,10 +9,12 @@ NovaEco is commercially supported by **[Circular Engineering Nova GmbH](https://
 
 ## 🚀 Key Entry Points
 
-- 📊 **Central App:** [app.novaeco.tech](https://app.novaeco.tech) — Mission Control dashboard
-- 🔐 **Identity Service:** [auth.novaeco.tech](https://auth.novaeco.tech) — Identity & SSO provider
-- 🔗 **API Gateway:** [api.novaeco.tech](https://api.novaeco.tech) — Central API Gateway  
-- 🌐 **Website & Docs:** [novaeco.tech](https://novaeco.tech) — Landing page and docs (Docusaurus)
+The ecosystem is anchored by **four core services** that provide unified identity, orchestration, and access management:
+
+- 📊 **[Central App](https://app.novaeco.tech)** — Mission Control for onboarding, discovery, and ecosystem management.
+- 🔐 **[Identity Service](https://auth.novaeco.tech)** — Digital Passport & Trust Profile for unified login.
+- 🔗 **[API Gateway](https://api.novaeco.tech)** — API gateway for secure, managed access to all services.
+- 🌐 **[Website & Docs](https://novaeco.tech)** — Architecture, use cases, and developer guides.
 - 💬 **Contact:** [contact@novaeco.tech](mailto:contact@novaeco.tech)
 
 ---
@@ -22,11 +24,7 @@ NovaEco is commercially supported by **[Circular Engineering Nova GmbH](https://
 NovaEco follows a **Federated Monorepo model**. Each **Enabler** or **Sector** is a self-contained monorepo that groups its API, App, Website, and Tests together.
 
 ### 1. Core Monorepo — [`ecosystem-core`](https://github.com/novaeco-tech/ecosystem-core)
-The “heart” of the ecosystem, containing the tightly‑coupled central services:
-- `/app` — Mission Control dashboard
-- `/auth` — Identity & SSO provider  
-- `/api` — Central API Gateway  
-- `/website` — Landing page and docs (Docusaurus)
+The “heart” of the ecosystem, containing the tightly‑coupled central services.
 
 ### 2. Horizontal Enabler Monorepos
 Cross‑cutting foundational services:
@@ -57,14 +55,7 @@ Industry‑specific applications consuming Enablers:
 - **[NovaChem](https://github.com/novaeco-tech/novachem)** — Sustainable chemical processes, leasing models.
 
 ### 4. Worker Repos
-Decoupled, single‑purpose backend services (e.g., `novahub-worker-sync`, `novabalance-worker-impact-calculator`) for scalability and fault isolation.
-They handle background jobs such as:
-- Data ingestion and normalization
-- Automated LCA calculations
-- Compliance checks
-- Logistics optimization
-
-Workers are independent for scalability and fault isolation.
+Decoupled, single‑purpose backend services (e.g., `novahub-worker-sync`) for scalability and fault isolation.
 
 ### 5. Product Repos
 Flagship applications that consume multiple enablers and sectors:

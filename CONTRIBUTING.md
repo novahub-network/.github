@@ -1,6 +1,6 @@
-# 👋 Welcome to the NovaEco\!
+# 👋 Welcome to the NovaEco!
 
-Thank you for your interest in contributing to the open-source operating system for a circular economy\! We are thrilled to have you here.
+Thank you for your interest in contributing to the open-source operating system for a circular economy! We are thrilled to have you here.
 
 Whether you're a developer, designer, policy expert, or just passionate about sustainability, your contributions are welcome and valued. This document is the "getting started" guide for our entire ecosystem.
 
@@ -8,7 +8,7 @@ First, please read our **[Code of Conduct](./CODE_OF_CONDUCT.md)**. We are commi
 
 ## 🗺️ How Our Organization is Structured
 
-Our organization uses a "monorepo" model to group related code, making it easier to develop and test features atomically.
+Our organization uses a **Federated Monorepo model** to group related code, making it easier to develop and test features atomically.
 
 1.  **`ecosystem-core`**: **The Core Monorepo.** This is the "heart" that runs the entire system. It contains our central `/api` (Gateway), `/auth` (Identity), `/app` (Dashboard), and `/website` (Docs).
 2.  **Horizontal Enabler Monorepos** (e.g., `novahub`, `novafin`, `novabalance`): **The Foundational Services.** These are the cross-cutting, shared services (like finance, or auditing) that all sectors consume.
@@ -21,33 +21,28 @@ You can read a full description of every repository on our [**Organization READM
 
 ## 🚀 How to Get Started
 
-### 1\. See the Big Picture
+### 1. See the Big Picture
 
 To understand our vision and where we're headed, start with our high-level planning tools:
 
   * **Ecosystem Development Roadmap:** Our main [**project board**](https://github.com/orgs/novaeco-tech/projects/1) tracks major, cross-ecosystem initiatives and high-level features.
-  * **Ecosystem Discussions:** For brainstorming, Q\&A, and early-stage idea refinement, join our [discussions](https://github.com/orgs/novaeco-tech/discussions/).
+  * **Ecosystem Discussions:** For brainstorming, Q&A, and early-stage idea refinement, join our [discussions](https://github.com/orgs/novaeco-tech/discussions/).
 
-### 2\. Find Your First Contribution
+### 2. Find Your First Contribution
 
 Want to dive in? We've made it easy to find a place to start.
 
 1.  **Start with Documentation:** The easiest way to contribute is to help with our docs. Find a typo, a confusing sentence, or suggest a new guide.
-
       * **Go to the docs directory:** [**`ecosystem-core/website`**](https://github.com/novaeco-tech/ecosystem-core/tree/main/website)
 
 2.  **Find a Beginner-Friendly Task:** We tag simple, well-scoped tasks just for new contributors.
-
     * **Browse `good first issues`:** [**Find all `good first issue 🌱` tasks**](https://github.com/search?q=org%3Anovaeco-tech+is%3Aopen+is%3Aissue+label%3A%22good+first+issue+%F0%9F%8C%B1%22)
-
     * **Check the Ecosystem Development Roadmap:** [**View the `Good First Issues 🌱` Roadmap**](https://github.com/orgs/novaeco-tech/projects/1/views/6)
 
 3.  **Help Where It's Wanted:** Look for tasks the core team has specifically requested help on.
-
       * **Browse `help wanted` issues:** [**Find all `help wanted 🤝` tasks**](https://github.com/search?q=org%3Anovaeco-tech+is%3Aopen+is%3Aissue+label%3A%22help+wanted+%F0%9F%A4%9D%22)
 
 4.  **Pick Up a "Ready" Task:** Once you're more comfortable, you can grab any task that's fully scoped and ready to be built.
-
       * **View the "Ready" column:** [table](https://github.com/orgs/novaeco-tech/projects/1/views/4)
 
 -----
@@ -98,7 +93,7 @@ Filter issues and the roadmap by the labels that describe the skills or input re
 
 ## ⚙️ Our Contribution Workflow
 
-### 1\. How Triage Works
+### 1. How Triage Works
 
 Our workflow is managed using the [project board](https://github.com/orgs/novaeco-tech/projects/1/).
 
@@ -108,7 +103,7 @@ Our workflow is managed using the [project board](https://github.com/orgs/novaec
   * **In Review:** Issues with an open Pull Request awaiting review.
   * **Done:** Pull Requests have been merged and the work is complete.
 
-### 2\. Code Contribution Steps
+### 2. Code Contribution Steps
 
 We follow a standard "fork-and-pull" Git workflow.
 
@@ -127,7 +122,7 @@ We follow a standard "fork-and-pull" Git workflow.
 7.  **Submit a Pull Request (PR):**
       * Push your branch to your fork.
       * Open a Pull Request from your branch to the `main` branch of the `novaeco-tech` repository.
-      * **Link your PR to the issue** (e.g., "Closes \#123"). This will automatically move the issue to the **`In Review`** column.
+      * **Link your PR to the issue** (e.g., "Closes #123"). This will automatically move the issue to the **`In Review`** column.
       * Fill out the PR template with a clear description of *what* you did and *why*.
 8.  **Review:** A core team member will review your code, provide feedback, and merge it when it's ready.
 
@@ -140,6 +135,9 @@ We follow a standard "fork-and-pull" Git workflow.
       * **SemVer (e.g., `v1.2.0`)** for all individual release artifacts (our `.tar.gz` packages).
       * **CalVer (e.g., `v2025.11.0`)** for our high-level "Ecosystem Release" (a "meta-package" of tested, compatible SemVer artifacts).
   * **Code Style:** Most of our projects use `Prettier` and `ESLint` (for JS/TS) or equivalent linters. Please check the local `README.md` and `package.json` of the component you're working in.
+  * **Tooling:** We use the internal **`novaeco` CLI** to manage workspaces and releases.
+      * **Install:** `pip install "git+https://github.com/novaeco-tech/ecosystem-devtools.git@main#subdirectory=novaeco-cli"`
+      * **Bootstrap:** Run `novaeco init` to clone all repos and set up your VS Code workspace.
 
 ### Label & Project Hygiene (For Maintainers)
 
@@ -156,4 +154,4 @@ Please **do not** report security vulnerabilities on the public issue tracker. I
   * **Specific Bugs/Features:** Use the **Issues** tab on the specific repository.
   * **Corporate/Legal:** [contact@novaeco.tech](mailto:contact@novaeco.tech)
 
-Thank you for helping us build the future of the circular economy\!
+Thank you for helping us build the future of the circular economy!

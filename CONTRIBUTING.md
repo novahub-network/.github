@@ -15,7 +15,7 @@ Our organization uses a **Federated Monorepo model** to group related code, maki
 3.  **Vertical Sector Monorepos** (e.g., `novaagro`, `novawater`, `novabuild`): **The Industry Applications.** These are the end-user-facing applications for a specific market, which are built by *consuming* the enablers.
 4.  **Decoupled Workers** (e.g., `novahub-worker-sync`): **Backend Services.** These are separate, single-purpose repos for background tasks, developed and deployed independently.
 5.  **Central Governance** (e.g., `ecosystem-qa`, `ecosystem-releases`): Repos that manage testing *between* repositories and define our official releases.
-6.  **Products** (e.g., `product-durasagv`): Standalone "flagship" product monorepos that consume services from multiple **Enablers** and **Sectors**.
+6.  **Products** (e.g., `product-duras-agv`): Standalone "flagship" product monorepos that consume services from multiple **Enablers** and **Sectors**.
 
 You can read a full description of every repository on our [**Organization README**](https://github.com/novaeco-tech).
 

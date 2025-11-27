@@ -59,7 +59,7 @@ Decoupled, single‑purpose backend services (e.g., `novahub-worker-sync`) for s
 
 ### 5. Product Repos
 Flagship applications that consume multiple enablers and sectors:
-- **[DurasAGV](https://github.com/novaeco-tech/product-durasagv)** – autonomous logistics robots integrating NovaSapien and NovaAgro.
+- **[DurasAGV](https://github.com/novaeco-tech/product-duras-agv)** – autonomous logistics robots integrating NovaSapien and NovaAgro.
 - **Urban Mining Coordination** – orchestration app combining NovaBuild, NovaWaste, and NovaMobility.
 - **Reusable Packaging Systems** – products integrating NovaPack, NovaMobility, and NovaWater.
 - **City‑Wide Loop** – unified reusable cup system across entire cities.

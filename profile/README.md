@@ -65,9 +65,10 @@ Flagship applications that consume multiple enablers and sectors:
 - **City‑Wide Loop** – unified reusable cup system across entire cities.
 - **Circular Hospital** – healthcare equipment leasing and reuse models.
 
-### 6. Governance Repos
-- **[ecosystem‑qa](https://github.com/novaeco-tech/ecosystem-qa)** — tests the seams between Enablers, Sectors, Workers and Products
-- **[ecosystem‑releases](https://github.com/novaeco-tech/ecosystem-releases)** — CalVer‑tagged release manifests
+### 6. Governance & Tooling Repos
+- **[ecosystem-devtools](https://github.com/novaeco-tech/ecosystem-devtools)** — Shared CLI, Docker images, and standard developer configurations.
+- **[ecosystem‑qa](https://github.com/novaeco-tech/ecosystem-qa)** — Integration testing gatekeeper for the ecosystem.
+- **[ecosystem‑releases](https://github.com/novaeco-tech/ecosystem-releases)** — CalVer‑tagged release manifests and BOMs.
 
 ---
 
